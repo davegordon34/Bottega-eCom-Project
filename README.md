@@ -1,4 +1,4 @@
-# React/Redux/Router Starter Project
+# DevCamp project for skill set improvement
 
 > Provided for the students of the [Bottega Code School](https://bottega.tech/)
 
