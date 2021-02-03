@@ -8,13 +8,91 @@ export function fetchUserPurchases() {
         payload: [
             {
                 _id: 0,
-                title: 'purchase 1',
-                amount: 8.02
+                total: 13.40,
+                orderNumber: 'A0048560462',
+                orderDate: new Date(),
+                creditCard: '-9852',
+                user: {
+                    name: 'Rodger Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
             },
             {
                 _id: 1,
-                title: 'purchase 2',
-                amount: 19.40
+                total: 23.40,
+                orderNumber: 'A8548248343',
+                orderDate: new Date(),
+                creditCard: '-4852',
+                user: {
+                    name: 'Jack Ryan',
+                    shippingAddress: '1234 Anywhere Street'
+                }
+            },
+            {
+                _id: 2,
+                total: 19.40,
+                orderNumber: 'AB004886843',
+                orderDate: new Date(),
+                creditCard: '-5678',
+                user: {
+                    name: 'Joe Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
+            },
+            {
+                _id: 3,
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-5678',
+                user: {
+                    name: 'Joe Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
+            },
+            {
+                _id: 4,
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-5678',
+                user: {
+                    name: 'Joe Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
+            },
+            {
+                _id: 5,
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-5678',
+                user: {
+                    name: 'Joe Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
+            },
+            {
+                _id: 6,
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-5678',
+                user: {
+                    name: 'Joe Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
+            },
+            {
+                _id: 7,
+                total: 19.40,
+                orderNumber: 'A0048248343',
+                orderDate: new Date(),
+                creditCard: '-5678',
+                user: {
+                    name: 'Joe Smith',
+                    shippingAddress: '1234 Anywhere Street'
+                }
             }
         ]
     })
