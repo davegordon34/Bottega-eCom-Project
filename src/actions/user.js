@@ -101,7 +101,7 @@ export function fetchUserPurchases() {
                     name: 'Joe Smith',
                     shippingAddress: '1234 Anywhere Street'
                 }
-            }
+            },
         ]
     })
 }
