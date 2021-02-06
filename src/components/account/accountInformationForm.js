@@ -63,7 +63,7 @@ class AccountInformationForm extends Component {
                 placeholder='Zipcode' 
                 name='zipcode' 
                 component={FormInput}/>
-                <div className='account-information-form__line'></div>,
+                <div className='account-information-form__line'></div>
 
             {
                 this.state.showPasswords ?
