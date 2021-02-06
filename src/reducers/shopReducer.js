@@ -1,20 +1,22 @@
 import {
     //SET_SHOP_CATEGORIES
+    SET_SHOP_PRODUCTS
 } from '../actions/types';
 
-const INTITAL_STATE = {
+const INITIAL_STATE = {
     categories: [],
     selectedCategoryID: 0,
-    productsSelected: []
+    productsSelected: [],
+    products: []
 }
 
-export default function(state = INTITAL_STATE, action) {
-    switch (action.tpye) {
-        // case SET_SHOP_CATEGORIES:
-        //     return {
-        //         ...state,
-        //         categories: action.payload
-        //     }
+export default function(state = INITIAL_STATE, action) {
+    switch (action.type) {
+        case SET_SHOP_PRODUCTS:
+            return {
+                ...state,
+                products: action.payload
+            }
         default: return state;
     }
 }
