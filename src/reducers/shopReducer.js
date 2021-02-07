@@ -1,7 +1,8 @@
 import {
     SET_SHOP_CATEGORIES,
     SET_SHOP_PRODUCTS,
-    FILTERED_PRODUCTS_WITH_ID
+    FILTER_PRODUCTS_WITH_ID,
+    FILTER_PRODUCTS_WITH_QUERY
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -23,7 +24,7 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 products: action.payload
             }
-        case FILTERED_PRODUCTS_WITH_ID:
+        case FILTER_PRODUCTS_WITH_ID:
             var filteredProducts = []
             state.products.map(product => {
                 if(product.belongsTo.includes(action.payload)) {
@@ -31,6 +32,17 @@ export default function(state = INITIAL_STATE, action) {
                 }
             })
             return {
+                ...state,
+                filteredProducts
+            }
+        case FILTER_PRODUCTS_WITH_QUERY:
+            var filteredProducts = [];
+            state.products.map(product => {
+                if(product.title.toLowerCase().includes(action.payload.query.toLowerCase())) {
+                    filteredProducts.push(product)
+                }
+            })
+            return{
                 ...state,
                 filteredProducts
             }
