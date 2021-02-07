@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import ShopSearchBar from './shopSearchBar';
 
 class Shop extends Component {
     componentDidMount() {
@@ -14,8 +15,10 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
+
+        // filter products with links 
         this.props.fetchShopProducts();
-            // filter products with links  
+             
     } 
 
     shouldComponentUpdate(nextProps) {
@@ -24,16 +27,21 @@ class Shop extends Component {
         }
         return true
     }
+
+    onSubmit = (fields) => {
+        console.log(fields);
+    }
+
     render() {
         return (
             <div className='shop'>
-                {/* shop search bar */}
-                <div className='shop_products'>
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
+                <div className='shop__products'>
                     {
                         this.props.filteredProducts.map(product => {
                             return (
-                                <div className='shop-product'>
-                                    <div key={product._id} className='shop-product__title'>
+                                <div key={product._id}className='shop-product'>
+                                    <div className='shop-product__title'>
                                         {product.title}
                                     </div>
                                     <div className='shop-product__description'>
