@@ -1,4 +1,4 @@
-import {
+import { 
     setHeaderLinks,
     setNavbarLinks,
     changeNavbarActive
@@ -6,13 +6,16 @@ import {
 
 import {
     fetchUserPurchases,
-    setPurchaseDetail
+    setPurchaseDetail,
+    fetchCartProducts,
+    addCartProduct,
+    signIn
 } from './user';
 
 import {
     fetchShopCategories,
     fetchShopProducts,
-    filterProductsWithCategoryID,
+    filterProductsWithCategoryId,
     filterProductsWithQuery
 } from './shop';
 
@@ -23,9 +26,13 @@ export {
 
     fetchUserPurchases,
     setPurchaseDetail,
-    
+    fetchCartProducts,
+    addCartProduct,
+    signIn,
+
     fetchShopCategories,
     fetchShopProducts,
-    filterProductsWithCategoryID,
+    filterProductsWithCategoryId,
+
     filterProductsWithQuery
 };

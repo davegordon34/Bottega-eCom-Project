@@ -4,13 +4,13 @@ import {
     CHANGE_NAVBAR_ACTIVE
 } from '../actions/types';
 
-const INTITAL_STATE = {
+const INITIAL_STATE = {
     headerLinks: [],
     navbarLinks: [],
     onClick: ''
 }
 
-export default function(state = INTITAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_HEADER_LINKS:
             return {
@@ -18,24 +18,24 @@ export default function(state = INTITAL_STATE, action) {
                 headerLinks: action.payload
             }
         case SET_NAVBAR_LINKS:
-            const { links, onClick } = action.payload
+        const { links, onClick } = action.payload; 
             return {
                 ...state,
                 navbarLinks: links,
                 onClick: onClick
             }
-        case CHANGE_NAVBAR_ACTIVE:
+        case CHANGE_NAVBAR_ACTIVE: 
             const navbarLinks = state.navbarLinks.map(link => {
-               link.active = false;
-               if(link._id == action.payload) {
-                   link.active = true;
-               }
-               return link;
+                link.active = false;
+                if(link._id == action.payload) {
+                    link.active = true;
+                }
+                return link;
             })
             return {
                 ...state,
                 navbarLinks
             }
-        default: return state
+        default: return state;
     }
 }

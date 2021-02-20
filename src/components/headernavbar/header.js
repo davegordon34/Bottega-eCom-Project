@@ -5,7 +5,7 @@ import history from '../../history';
 
 class Header extends Component {
     render() {
-        return(
+        return (
             <div className='header'>
                 <img className='header__img' src='http://via.placeholder.com/50x50'/>
                 <div className='header__links'>
@@ -24,13 +24,13 @@ class Header extends Component {
     }
 }
 
-function MapStateToProps(state) {
+function mapStateToProps(state) {
     const{ headerLinks } = state.headerNavbar;
     return {
         headerLinks
     }
 }
 
-Header = connect(MapStateToProps)(Header);
+Header = connect(mapStateToProps)(Header);
 
-export default Header; 
+export default Header;

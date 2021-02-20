@@ -15,38 +15,32 @@
 }
 
 .account-information-form {
-        
+
     &__name {
         grid-column: s/m;
         grid-row: name-s/name-e;
-
     }
-
     &__email {
         grid-column: s/m;
         grid-row: email-s/email-e;
     }
-
     &__street-address {
         grid-column: m/e;
         grid-row: street-address-s/street-address-e;
     }
-
     &__city {
         grid-column: m/e;
         grid-row: city-s/city-e;
     }
-
     &__state {
         grid-row: state-s/state-e;
     }
-
     &__zipcode {
         grid-row: zipcode-s/zipcode-e;
         transform: translateX(226px);
     }
 
-    &__state, 
+    &__state,
     &__zipcode {
         grid-column: m/e;
         input {
@@ -63,7 +57,7 @@
 
     &__new {
         grid-column: s/m;
-        grid-row: new-s/new-e;
+        grid-row: new-s/new-e;  
     }
 
     &__confirm {
@@ -71,11 +65,11 @@
         grid-row: confirm-s/confirm-e;
     }
 
-    &__new,
+    &__new, 
     &__confirm {
         transform: translateY(-25px);
     }
-    
+
     &__line {
         grid-row: line-s/line-e;
         grid-column: s/e;
@@ -91,6 +85,8 @@
     &__update-information {
         grid-column: update-s/update-e;
         grid-row: buttons-s/buttons-e;
+
     }
+
 
 }
